@@ -26,6 +26,8 @@ class Model:
             X, y, test_size=0.3, random_state=1234
         )
 
+        return X_train, X_test, y_train, y_test
+
     def preprocessing(X_train):
         pass
 
