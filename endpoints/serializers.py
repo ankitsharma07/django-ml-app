@@ -1,4 +1,10 @@
 """
+# author: Ankit Sharma [@nezubn]
+# filename: serializers.py
+# Copyright 2022-07-26
+"""
+
+"""
 Serializers will help with packing and unpacking database objects into JSON objects.
 In `Endpoints` and `MLAlgorithm` serializers, we defined all read-only fields.
 This is because, we will create and modify our objects only on the server-side.
@@ -8,13 +14,13 @@ For `MLRequest` serializer there is a `feedback`field that is left in read and
 write mode - it will be needed to provide feedback about predictions to the server.
 """
 
-from rest_framework import serializers
 from django_ml_app.endpoints.models import (
     Endpoint,
     MLAlgorithm,
     MLAlgorithmStatus,
     MLRequest,
 )
+from rest_framework import serializers
 
 
 class EndpointSerializer(serializers.ModelSerializer):
